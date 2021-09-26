@@ -4,6 +4,7 @@
    padding:15px;
    background-color:bisque ;
    border-radius: 10px;
+   font-size: 14px;
    transition: .5s all;
 }
 
@@ -30,6 +31,10 @@
     height: 100px;
     transition: .3s all;
     border-radius: 50%;
+}
+.employee-name{
+    font-weight: 500;
+    font-size: 12px;
 }
 .add-employee{
     border:none;

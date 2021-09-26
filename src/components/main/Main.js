@@ -6,16 +6,21 @@ import Report from './report/Report';
 
 const Main = () => {
     const [employees, setemployees] = useState([]);
+    const [report, setReport] = useState([])
     useEffect(() => {
         fetch('./fakeDb.JSON')
             .then(res => res.json())
             .then(data => { setemployees(data) })
 
-    }, [])
+    }, []);
+    const addEmployee = (employee) => {
+        const newReport = [...report, employee];
+        setReport(newReport);
+    };
     return (
         <div className="main">
-            <Cards employees={employees} />
-            <Report></Report>
+            <Cards employees={employees} add={addEmployee} />
+            <Report report={report}></Report>
         </div>
     )
 }

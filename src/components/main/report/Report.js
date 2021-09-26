@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Report = () => {
+const Report = ({ report = [] }) => {
+    console.log(report);
+    const { } = report
     return (
-        <div>
-            i am a report
+        <div className="report">
+            <p>Total employee : {report.length}</p>
         </div>
     )
 }
