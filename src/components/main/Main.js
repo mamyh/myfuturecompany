@@ -6,7 +6,7 @@ import Report from './report/Report';
 
 const Main = () => {
     const [employees, setemployees] = useState([]);
-    const [report, setReport] = useState([])
+    const [reports, setReports] = useState([])
     useEffect(() => {
         fetch('./fakeDb.JSON')
             .then(res => res.json())
@@ -14,13 +14,20 @@ const Main = () => {
 
     }, []);
     const addEmployee = (employee) => {
-        const newReport = [...report, employee];
-        setReport(newReport);
+        let newReport;
+        const employeeIsExists = reports.find((reportEmployee) => employee.name === reportEmployee.name);
+        if (employeeIsExists) {
+            newReport = [...reports];
+        } else {
+            newReport = [...reports, employee];
+        }
+        // console.log(newReport);
+        setReports(newReport);
     };
     return (
         <div className="main">
-            <Cards employees={employees} add={addEmployee} />
-            <Report report={report}></Report>
+            <Cards employees={employees} addEmployee={addEmployee} />
+            <Report reports={reports}></Report>
         </div>
     )
 }

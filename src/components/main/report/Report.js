@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Report = ({ report = [] }) => {
-    console.log(report);
-    const { } = report
+const Report = ({ reports = [] }) => {
+    console.log(reports);
+    const { } = reports
     return (
         <div className="report">
-            <p>Total employee : {report.length}</p>
+            <p>Total employee : {reports.length}</p>
         </div>
     )
 }
