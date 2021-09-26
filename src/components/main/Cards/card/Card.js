@@ -5,7 +5,7 @@ const Card = ({ employee, addEmployee }) => {
     return (
         <div className="card">
             <div className="employee-image">
-                <img className="image" src={img} alt="Employee image" />
+                <img className="image" src={img} alt="Employee" />
             </div>
             <h1 className="employee-name">Name: {name}</h1>
             <p className="employee-role">Role : {role}</p>
