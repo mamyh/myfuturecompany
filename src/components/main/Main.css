@@ -1,0 +1,6 @@
+.main{
+    width: 1056px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}

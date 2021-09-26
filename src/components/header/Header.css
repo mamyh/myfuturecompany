@@ -1,0 +1,7 @@
+.header{
+   display: grid;
+   grid-template-columns: 2fr 4fr;
+   padding-bottom: 30px;
+   border-bottom: 1px solid #ccc;
+   margin-bottom: 40px;
+}

@@ -1,0 +1,44 @@
+
+.card{
+   text-align: center;
+   padding:15px;
+   background-color:bisque ;
+   border-radius: 10px;
+   transition: .5s all;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 120px rgba(0,0,0,.5);
+}
+.card:hover .image{
+    transform: scale(1.2);
+}
+.card > *{
+    margin-bottom:10px;
+}
+.employee-image{
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin:auto;
+    margin-bottom:30px;
+    border-radius: 50%;
+}
+.image{
+    width: 100px;
+    height: 100px;
+    transition: .3s all;
+    border-radius: 50%;
+}
+.add-employee{
+    border:none;
+    outline:none;
+    border-radius: 5px;
+    padding:10px 40px;
+    transition: .2s all;
+}
+.add-employee:hover{
+   transform: translateY(-.2px);
+   box-shadow: 0 15px 50px rgba(0,0,0,.5);
+}
